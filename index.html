@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function myfunction(buttonvalue){console.log("hello");
+var buttontext= document.getElementById("text");
+switch(buttonvalue) {
+  case "=":
+    // 
+    break;
+  case "c":
+    buttontext.value= ""
+    break;
+  case "ce":
+   buttontext.value= buttontext.value.slice(0, -1) //'abcde'
+   break;
+  default:
+    buttontext.value = buttontext.value+buttonvalue
+}
+}
+</script>
+<center>
+<h1>CALCULATOR</h1>
+<textarea id="text"></textarea>
+<p>My Numbers</p>
+<button onclick= "myfunction('0')"> 0 </button>
+<button onclick= "myfunction('1')"> 1 </button>
+<button onclick= "myfunction('2')"> 2 </button>
+<br />
+
+<button onclick= "myfunction('3')"> 3 </button>
+<button onclick= "myfunction('4')"> 4 </button>
+<button onclick= "myfunction('5')"> 5 </button>
+<br />
+
+<button onclick= "myfunction('6')"> 6 </button>
+<button onclick= "myfunction('7')"> 7 </button>
+<button onclick= "myfunction('8')"> 8 </button>
+<br />
+
+<button onclick= "myfunction('9')"> 9 </button>
+<br />
+
+<button onclick= "myfunction('+')"> + </button>
+<button onclick= "myfunction('-')"> - </button>
+<button onclick= "myfunction('*')"> * </button>
+<button onclick= "myfunction('/')"> / </button>
+<br />
+
+<button onclick= "myfunction('=')"> = </button>
+<button title= "clear all" onclick= "myfunction('c')"> c </button>
+<button title= "clear entry" onclick= "myfunction('ce')"> ce </button>
+<br />
+</center>
+</body>
+</html>
+
